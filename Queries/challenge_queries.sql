@@ -50,11 +50,16 @@ ORDER BY title ASC, emp_no ASC;
 
 select * from retirement_ready;
 
+-- Count of Retirement Ready Employees
+SELECT 
+	COUNT(emp_no)
+FROM retirement_ready
+
 -- Number of Retiring Employees by Title
 SELECT 
 	title,
 	COUNT(title)
---INTO expected_vacancies
+INTO expected_vacancies
 FROM retirement_ready
 GROUP BY title
 ORDER BY title ASC;
@@ -112,3 +117,8 @@ FROM
 ORDER BY emp_no;
 
 select * from mentorship_eligibility;
+
+-- Count of Mentorship Elegible Employees
+SELECT 
+	COUNT(emp_no)
+FROM mentorship_eligibility
